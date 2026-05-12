@@ -1,0 +1,22 @@
+{
+  "patientId": "P010",
+  "ageYears": 50,
+  "sex": "male",
+  "officeSBP": 155,
+  "officeDBP": 100,
+  "hasGout": true,
+  "hasAsthma": true,
+  "hasAngioedemaHistory": true,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_2",
+    "cvRiskLevel": "high",
+    "currentStep": "h4_r4_spc_dual",
+    "drugClassCodesNotContains": ["D"],
+    "drugClassCodesContains": ["A", "C"],
+    "safetyAlertCount": 2,
+    "pathwayUsed": "optimal",
+    "note": "D removed (gout CI); A_ACEi warned (angioedema) but A_ARB ok so A kept; B not in dual rec; C safe. 2 alerts: 1 CI (D) + 1 warning (A_ACEi angioedema)"
+  }
+}

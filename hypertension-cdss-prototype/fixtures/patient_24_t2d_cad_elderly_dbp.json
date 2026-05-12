@@ -1,0 +1,20 @@
+{
+  "patientId": "P024",
+  "ageYears": 68,
+  "sex": "male",
+  "officeSBP": 145,
+  "officeDBP": 90,
+  "hasDiabetesType2": true,
+  "hasCAD": true,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_1",
+    "cvRiskLevel": "high",
+    "treatmentTarget": { "dbpMax": 79 },
+    "currentStep": "h4_r7_compelling",
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "note": "T2D+CAD age >65: DBP target 70-79 per Bảng 7 special case"
+  }
+}

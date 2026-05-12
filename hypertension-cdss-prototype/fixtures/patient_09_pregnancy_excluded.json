@@ -1,0 +1,19 @@
+{
+  "patientId": "P009",
+  "ageYears": 28,
+  "sex": "female",
+  "officeSBP": 145,
+  "officeDBP": 92,
+  "isPregnant": true,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "OUT_OF_SCOPE",
+    "bpCategory": "grade_1",
+    "cvRiskLevel": "low",
+    "currentStep": null,
+    "drugClassCodes": null,
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "traceRuleIds": ["out_of_scope_check"]
+  }
+}

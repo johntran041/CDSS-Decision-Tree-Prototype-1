@@ -1,0 +1,22 @@
+{
+  "patientId": "P006",
+  "ageYears": 65,
+  "sex": "male",
+  "officeSBP": 165,
+  "officeDBP": 100,
+  "ckdStage": "stage_3",
+  "egfrMlMin": 40,
+  "potassiumMmolL": 4.2,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_2",
+    "cvRiskLevel": "high",
+    "treatmentThreshold": { "sbp": 130, "dbp": 85 },
+    "currentStep": "h4_r7_compelling",
+    "drugClassCodes": ["A", "C"],
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "traceRuleIds": ["classify_bp", "stratify_risk", "compute_threshold", "compute_target", "detect_compelling_indication", "select_pathway", "h4_r7_compelling", "safety_check"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "patientId": "P001",
+  "ageYears": 35,
+  "sex": "male",
+  "officeSBP": 125,
+  "officeDBP": 80,
+  "siteConfig": { "pathwayMode": "essential" },
+  "_expected": {
+    "status": "LIFESTYLE_ONLY",
+    "bpCategory": "normal",
+    "cvRiskLevel": "low",
+    "treatmentThreshold": { "sbp": 140, "dbp": 90 },
+    "currentStep": null,
+    "drugClassCodes": null,
+    "safetyAlertCount": 0,
+    "pathwayUsed": "essential",
+    "traceRuleIds": ["classify_bp", "stratify_risk", "compute_threshold", "compute_target"]
+  }
+}

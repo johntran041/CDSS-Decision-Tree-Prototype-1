@@ -1,0 +1,20 @@
+{
+  "patientId": "P019",
+  "ageYears": 60,
+  "sex": "male",
+  "officeSBP": 150,
+  "officeDBP": 95,
+  "potassiumMmolL": 5.8,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_1",
+    "cvRiskLevel": "intermediate",
+    "currentStep": "h4_r4_spc_dual",
+    "drugClassCodesNotContains": ["A"],
+    "drugClassCodesContains": ["C"],
+    "safetyAlertCount": 2,
+    "pathwayUsed": "optimal",
+    "note": "K=5.8 >5.5 → absolute CI for A(ACEi and ARB); C+D remain"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "patientId": "P014",
+  "ageYears": 82,
+  "sex": "female",
+  "officeSBP": 165,
+  "officeDBP": 95,
+  "isFrail": true,
+  "siteConfig": { "pathwayMode": "essential" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_2",
+    "cvRiskLevel": "high",
+    "treatmentThreshold": { "sbp": 160, "dbp": 90 },
+    "currentStep": "h3_r3_monotherapy",
+    "drugClassCodes": ["A", "B", "C", "D"],
+    "doseLevel": "low",
+    "safetyAlertCount": 0,
+    "pathwayUsed": "essential",
+    "note": "Age >=80 + frail → monotherapy low dose"
+  }
+}

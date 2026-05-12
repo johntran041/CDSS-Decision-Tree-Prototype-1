@@ -1,0 +1,28 @@
+{
+  "patientId": "P021",
+  "ageYears": 60,
+  "sex": "male",
+  "officeSBP": 155,
+  "officeDBP": 100,
+  "egfrMlMin": 40,
+  "potassiumMmolL": 4.8,
+  "currentMedications": [
+    { "classCode": "A", "drugName": "Perindopril", "doseLevel": "usual" },
+    { "classCode": "C", "drugName": "Amlodipine", "doseLevel": "usual" },
+    { "classCode": "D", "drugName": "Indapamide", "doseLevel": "usual" }
+  ],
+  "monthsOnCurrentRegimen": 2,
+  "bpAtTargetCurrentRegimen": false,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_2",
+    "cvRiskLevel": "high",
+    "currentStep": "h4_r6_resistant",
+    "drugClassCodesNotContains": ["MRA"],
+    "drugClassCodesContains": ["alpha"],
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "note": "Resistant HTN: eGFR 40 <45 and K 4.8 >4.5 → MRA cautioned, use alternative (alpha-blocker)"
+  }
+}

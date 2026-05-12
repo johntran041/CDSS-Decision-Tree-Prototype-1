@@ -1,0 +1,23 @@
+{
+  "patientId": "P026",
+  "ageYears": 70,
+  "sex": "male",
+  "officeSBP": 158,
+  "officeDBP": 92,
+  "hasDiabetesType2": true,
+  "hasCAD": true,
+  "ckdStage": "stage_3",
+  "egfrMlMin": 45,
+  "potassiumMmolL": 4.0,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_1",
+    "cvRiskLevel": "high",
+    "treatmentThreshold": { "sbp": 140 },
+    "currentStep": "h4_r7_compelling",
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "note": "Multi-comorbidity: HFrEF > post_MI > CAD priority; CAD selected per priority order"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "patientId": "P031",
+  "ageYears": 50,
+  "sex": "male",
+  "officeSBP": 135,
+  "officeDBP": 85,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "LIFESTYLE_ONLY",
+    "bpCategory": "high_normal",
+    "cvRiskLevel": "low",
+    "drugClassCodes": null,
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "note": "HABTC, no risk factors, no comorbidity → LIFESTYLE_ONLY"
+  }
+}

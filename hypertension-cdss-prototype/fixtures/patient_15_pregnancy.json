@@ -1,0 +1,17 @@
+{
+  "patientId": "P015",
+  "ageYears": 30,
+  "sex": "female",
+  "officeSBP": 145,
+  "officeDBP": 92,
+  "isPregnant": true,
+  "siteConfig": { "pathwayMode": "essential" },
+  "_expected": {
+    "status": "OUT_OF_SCOPE",
+    "currentStep": null,
+    "drugClassCodes": null,
+    "safetyAlertCount": 0,
+    "pathwayUsed": "essential",
+    "traceRuleIds": ["out_of_scope_check"]
+  }
+}

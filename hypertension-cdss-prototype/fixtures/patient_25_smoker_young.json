@@ -1,0 +1,20 @@
+{
+  "patientId": "P025",
+  "ageYears": 30,
+  "sex": "male",
+  "officeSBP": 140,
+  "officeDBP": 90,
+  "isSmoker": true,
+  "hasFamilyHistoryHTN": true,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_1",
+    "cvRiskLevel": "high",
+    "currentStep": "h4_r4_spc_dual",
+    "pillForm": "single_pill",
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "note": "Grade 1, intermediate risk → SPC dual per Hình 4"
+  }
+}

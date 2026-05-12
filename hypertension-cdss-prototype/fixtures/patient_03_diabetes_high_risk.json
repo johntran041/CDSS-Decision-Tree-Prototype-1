@@ -1,0 +1,22 @@
+{
+  "patientId": "P003",
+  "ageYears": 60,
+  "sex": "male",
+  "officeSBP": 150,
+  "officeDBP": 95,
+  "hasDiabetesType2": true,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_1",
+    "cvRiskLevel": "high",
+    "treatmentThreshold": { "sbp": 130, "dbp": 85 },
+    "treatmentTarget": { "sbpMin": 120, "sbpMax": 130, "dbpMax": 80 },
+    "currentStep": "h4_r7_compelling",
+    "drugClassCodes": ["A", "C", "D"],
+    "drugClassCodesNotContains": ["B"],
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "traceRuleIds": ["classify_bp", "stratify_risk", "compute_threshold", "compute_target", "detect_compelling_indication", "select_pathway", "h4_r7_compelling", "safety_check"]
+  }
+}

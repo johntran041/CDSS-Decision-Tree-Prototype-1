@@ -1,0 +1,19 @@
+{
+  "patientId": "P030",
+  "ageYears": 60,
+  "sex": "male",
+  "officeSBP": 150,
+  "officeDBP": 95,
+  "hasAtrialFibrillation": true,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_1",
+    "cvRiskLevel": "intermediate",
+    "currentStep": "h4_r7_compelling",
+    "drugClassCodesContains": ["A", "B"],
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "note": "AF: A+B for rate control [Section 3.7]"
+  }
+}

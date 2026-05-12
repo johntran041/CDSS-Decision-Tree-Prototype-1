@@ -1,0 +1,17 @@
+{
+  "patientId": "P016",
+  "ageYears": 55,
+  "sex": "male",
+  "officeSBP": 190,
+  "officeDBP": 125,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "SAFETY_HALT",
+    "bpCategory": "hypertensive_crisis",
+    "currentStep": null,
+    "drugClassCodes": null,
+    "safetyAlertCount": 1,
+    "pathwayUsed": "optimal",
+    "traceRuleIds": ["safety_halt_crisis"]
+  }
+}

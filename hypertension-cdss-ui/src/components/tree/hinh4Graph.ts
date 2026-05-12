@@ -1,0 +1,43 @@
+import type { Node, Edge } from 'reactflow';
+
+export const hinh4Nodes: Node[] = [
+  { id: 'h4_start', position: { x: 440, y: 0 }, data: { label: 'HA phòng khám ≥ 130/85 mmHg\nTuổi > 18', kind: 'start', ruleId: 'h4_r1_assess' }, type: 'cdssNode' },
+  { id: 'h4_assess', position: { x: 440, y: 100 }, data: { label: 'Đánh giá toàn diện\n+ Cá thể hoá', kind: 'decision', ruleId: 'h4_r1_assess' }, type: 'cdssNode' },
+  { id: 'h4_branch_low', position: { x: 60, y: 230 }, data: { label: 'HABTC\n+ Nguy cơ Thấp/TB', kind: 'branch', ruleId: 'h4_r2_branch' }, type: 'cdssNode' },
+  { id: 'h4_branch_high', position: { x: 440, y: 230 }, data: { label: 'HABTC + Nguy cơ Cao\nhoặc THA ≥ 140/90', kind: 'branch', ruleId: 'h4_r2_branch' }, type: 'cdssNode' },
+  { id: 'h4_branch_compelling', position: { x: 820, y: 230 }, data: { label: 'THA + Chỉ định bắt buộc\n(BMV, Suy tim, Đột quỵ,\nBTM, ĐTĐ nguy cơ cao)', kind: 'branch', ruleId: 'h4_r2_branch' }, type: 'cdssNode' },
+  { id: 'h4_mono', position: { x: 60, y: 390 }, data: { label: 'Đơn trị liệu (viên đơn)\nA, B, C hoặc D\n(liều thấp)', kind: 'action', ruleId: 'h4_r3_monotherapy' }, type: 'cdssNode' },
+  { id: 'h4_dual', position: { x: 440, y: 390 }, data: { label: 'Viên phối hợp 2 thuốc\nA+C hoặc A+D\n(thấp → thông thường)', kind: 'action', ruleId: 'h4_r4_spc_dual' }, type: 'cdssNode' },
+  { id: 'h4_triple', position: { x: 440, y: 540 }, data: { label: 'Viên phối hợp 3 thuốc\nA+C+D\n(liều thông thường)', kind: 'action', ruleId: 'h4_r5_spc_triple' }, type: 'cdssNode' },
+  { id: 'h4_resistant', position: { x: 440, y: 690 }, data: { label: 'THA kháng trị\nThêm MRA\n(hoặc alpha / beta / LT quai)', kind: 'action', ruleId: 'h4_r6_resistant' }, type: 'cdssNode' },
+  { id: 'h4_specialist', position: { x: 440, y: 840 }, data: { label: 'Tham vấn chuyên gia THA', kind: 'refer', ruleId: 'h4_specialist_referral' }, type: 'cdssNode' },
+  { id: 'h4_compelling', position: { x: 820, y: 390 }, data: { label: 'Phác đồ theo\nbệnh đồng mắc', kind: 'action', ruleId: 'h4_r7_compelling' }, type: 'cdssNode' },
+  { id: 'h4_compelling_cad', position: { x: 620, y: 540 }, data: { label: 'BMV: A+B\nhoặc A+C', kind: 'leaf', ruleId: 'h4_r7_compelling' }, type: 'cdssNode' },
+  { id: 'h4_compelling_hfref', position: { x: 780, y: 540 }, data: { label: 'Suy tim EF↓:\nA/ARNI+B+SGLT2i+MRA', kind: 'leaf', ruleId: 'h4_r7_compelling' }, type: 'cdssNode' },
+  { id: 'h4_compelling_stroke', position: { x: 940, y: 540 }, data: { label: 'Sau đột quỵ:\nA+D', kind: 'leaf', ruleId: 'h4_r7_compelling' }, type: 'cdssNode' },
+  { id: 'h4_compelling_ckd', position: { x: 790, y: 660 }, data: { label: 'BTM: A+C', kind: 'leaf', ruleId: 'h4_r7_compelling' }, type: 'cdssNode' },
+  { id: 'h4_compelling_t2d', position: { x: 950, y: 660 }, data: { label: 'ĐTĐ nguy cơ cao:\nA+C hoặc A+D\n± SGLT2i/GLP1', kind: 'leaf', ruleId: 'h4_r7_compelling' }, type: 'cdssNode' },
+  { id: 'h4_maintain', position: { x: 440, y: 960 }, data: { label: 'Đạt đích — Theo dõi', kind: 'success', ruleId: 'h4_maintain' }, type: 'cdssNode' },
+];
+
+export const hinh4Edges: Edge[] = [
+  { id: 'e1', source: 'h4_start', target: 'h4_assess' },
+  { id: 'e2', source: 'h4_assess', target: 'h4_branch_low' },
+  { id: 'e3', source: 'h4_assess', target: 'h4_branch_high' },
+  { id: 'e4', source: 'h4_assess', target: 'h4_branch_compelling' },
+  { id: 'e5', source: 'h4_branch_low', target: 'h4_mono' },
+  { id: 'e6', source: 'h4_branch_high', target: 'h4_dual' },
+  { id: 'e7', source: 'h4_branch_compelling', target: 'h4_compelling' },
+  { id: 'e8', source: 'h4_mono', target: 'h4_dual', label: 'Không đạt', type: 'step' },
+  { id: 'e9', source: 'h4_dual', target: 'h4_triple', label: 'Không đạt', type: 'step' },
+  { id: 'e10', source: 'h4_triple', target: 'h4_resistant', label: 'Không đạt', type: 'step' },
+  { id: 'e11', source: 'h4_resistant', target: 'h4_specialist', label: 'Không đạt', type: 'step' },
+  { id: 'e12', source: 'h4_compelling', target: 'h4_compelling_cad' },
+  { id: 'e13', source: 'h4_compelling', target: 'h4_compelling_hfref' },
+  { id: 'e14', source: 'h4_compelling', target: 'h4_compelling_stroke' },
+  { id: 'e15', source: 'h4_compelling', target: 'h4_compelling_ckd' },
+  { id: 'e16', source: 'h4_compelling', target: 'h4_compelling_t2d' },
+  { id: 'e17', source: 'h4_mono', target: 'h4_maintain', label: 'Đạt đích', type: 'step' },
+  { id: 'e18', source: 'h4_dual', target: 'h4_maintain', label: 'Đạt đích', type: 'step' },
+  { id: 'e19', source: 'h4_triple', target: 'h4_maintain', label: 'Đạt đích', type: 'step' },
+];

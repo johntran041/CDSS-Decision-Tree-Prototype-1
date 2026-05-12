@@ -1,0 +1,27 @@
+{
+  "patientId": "P020",
+  "ageYears": 60,
+  "sex": "male",
+  "officeSBP": 145,
+  "officeDBP": 90,
+  "currentMedications": [
+    { "classCode": "A", "drugName": "Perindopril", "doseLevel": "usual" },
+    { "classCode": "C", "drugName": "Amlodipine", "doseLevel": "usual" },
+    { "classCode": "D", "drugName": "Indapamide", "doseLevel": "usual" }
+  ],
+  "monthsOnCurrentRegimen": 2,
+  "bpAtTargetCurrentRegimen": false,
+  "officeSBP": 150,
+  "officeDBP": 95,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_1",
+    "cvRiskLevel": "intermediate",
+    "currentStep": "h4_r6_resistant",
+    "drugClassCodesContains": ["MRA"],
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "note": "Resistant HTN: add MRA to A+C+D"
+  }
+}

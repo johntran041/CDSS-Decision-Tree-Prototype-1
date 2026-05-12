@@ -1,0 +1,19 @@
+{
+  "patientId": "P002",
+  "ageYears": 45,
+  "sex": "female",
+  "officeSBP": 135,
+  "officeDBP": 87,
+  "monthsOnLifestyleChange": 0,
+  "siteConfig": { "pathwayMode": "essential" },
+  "_expected": {
+    "status": "LIFESTYLE_ONLY",
+    "bpCategory": "high_normal",
+    "cvRiskLevel": "low",
+    "treatmentThreshold": { "sbp": 140, "dbp": 90 },
+    "drugClassCodes": null,
+    "safetyAlertCount": 0,
+    "pathwayUsed": "essential",
+    "traceRuleIds": ["classify_bp", "stratify_risk", "compute_threshold", "compute_target", "detect_compelling_indication", "select_pathway", "h3_r2_branch"]
+  }
+}

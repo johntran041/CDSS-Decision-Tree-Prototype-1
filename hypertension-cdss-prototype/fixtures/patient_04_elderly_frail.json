@@ -1,0 +1,20 @@
+{
+  "patientId": "P004",
+  "ageYears": 82,
+  "sex": "female",
+  "officeSBP": 155,
+  "officeDBP": 85,
+  "isFrail": true,
+  "siteConfig": { "pathwayMode": "essential" },
+  "_expected": {
+    "status": "LIFESTYLE_ONLY",
+    "bpCategory": "isolated_systolic",
+    "cvRiskLevel": "intermediate",
+    "treatmentThreshold": { "sbp": 160, "dbp": 90 },
+    "currentStep": null,
+    "drugClassCodes": null,
+    "safetyAlertCount": 0,
+    "pathwayUsed": "essential",
+    "note": "Age >=80 threshold is 160/90; BP 155/85 is below threshold"
+  }
+}

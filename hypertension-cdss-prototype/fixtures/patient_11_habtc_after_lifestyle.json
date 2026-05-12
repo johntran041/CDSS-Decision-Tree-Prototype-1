@@ -1,0 +1,19 @@
+{
+  "patientId": "P011",
+  "ageYears": 45,
+  "sex": "female",
+  "officeSBP": 135,
+  "officeDBP": 87,
+  "monthsOnLifestyleChange": 6,
+  "siteConfig": { "pathwayMode": "essential" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "high_normal",
+    "cvRiskLevel": "low",
+    "currentStep": "h3_r3_monotherapy",
+    "drugClassCodes": ["A", "B", "C", "D"],
+    "safetyAlertCount": 0,
+    "pathwayUsed": "essential",
+    "note": "Same as P002 but 6 months lifestyle passed → start monotherapy"
+  }
+}

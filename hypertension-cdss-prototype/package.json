@@ -1,0 +1,20 @@
+{
+  "name": "hypertension-cdss-prototype",
+  "version": "0.1.0",
+  "description": "VSH/VNHA 2022 Hypertension CDSS Rule Engine Prototype",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "cli": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}

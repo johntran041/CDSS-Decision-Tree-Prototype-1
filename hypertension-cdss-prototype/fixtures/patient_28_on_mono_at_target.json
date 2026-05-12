@@ -1,0 +1,23 @@
+{
+  "patientId": "P028",
+  "ageYears": 50,
+  "sex": "male",
+  "officeSBP": 125,
+  "officeDBP": 78,
+  "currentMedications": [
+    { "classCode": "A", "drugName": "Ramipril", "doseLevel": "usual" }
+  ],
+  "monthsOnCurrentRegimen": 3,
+  "bpAtTargetCurrentRegimen": true,
+  "siteConfig": { "pathwayMode": "essential" },
+  "_expected": {
+    "status": "LIFESTYLE_ONLY",
+    "bpCategory": "normal",
+    "cvRiskLevel": "low",
+    "currentStep": null,
+    "drugClassCodes": null,
+    "safetyAlertCount": 0,
+    "pathwayUsed": "essential",
+    "note": "BP at 125/78 below threshold; at target on current regimen → maintain"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "patientId": "P029",
+  "ageYears": 50,
+  "sex": "male",
+  "officeSBP": 138,
+  "officeDBP": 87,
+  "currentMedications": [
+    { "classCode": "A", "drugName": "Ramipril", "doseLevel": "usual" }
+  ],
+  "monthsOnCurrentRegimen": 1,
+  "bpAtTargetCurrentRegimen": false,
+  "siteConfig": { "pathwayMode": "essential" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "high_normal",
+    "cvRiskLevel": "low",
+    "currentStep": "h3_r4_dual_combination",
+    "safetyAlertCount": 0,
+    "pathwayUsed": "essential",
+    "note": "On mono 1 month, not at target → escalate to dual A+C or A+D"
+  }
+}

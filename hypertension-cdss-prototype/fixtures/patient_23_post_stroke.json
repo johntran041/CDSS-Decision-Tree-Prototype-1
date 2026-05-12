@@ -1,0 +1,19 @@
+{
+  "patientId": "P023",
+  "ageYears": 70,
+  "sex": "male",
+  "officeSBP": 160,
+  "officeDBP": 100,
+  "hasPostStroke": true,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_2",
+    "cvRiskLevel": "high",
+    "currentStep": "h4_r7_compelling",
+    "drugClassCodes": ["A", "D"],
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "note": "Post-stroke: A+D per Bảng 23-24"
+  }
+}

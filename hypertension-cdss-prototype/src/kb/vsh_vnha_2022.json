@@ -1,0 +1,322 @@
+{
+  "bpCategories": [
+    {
+      "name": "normal",
+      "sbpMin": null,
+      "sbpMax": 130,
+      "dbpMin": null,
+      "dbpMax": 85,
+      "source": { "reference": "Bảng 1", "page": 7 }
+    },
+    {
+      "name": "high_normal",
+      "sbpMin": 130,
+      "sbpMax": 140,
+      "dbpMin": 85,
+      "dbpMax": 90,
+      "source": { "reference": "Bảng 1", "page": 7 }
+    },
+    {
+      "name": "grade_1",
+      "sbpMin": 140,
+      "sbpMax": 160,
+      "dbpMin": 90,
+      "dbpMax": 100,
+      "source": { "reference": "Bảng 1", "page": 7 }
+    },
+    {
+      "name": "grade_2",
+      "sbpMin": 160,
+      "sbpMax": null,
+      "dbpMin": 100,
+      "dbpMax": null,
+      "source": { "reference": "Bảng 1", "page": 7 }
+    },
+    {
+      "name": "isolated_systolic",
+      "sbpMin": 140,
+      "sbpMax": null,
+      "dbpMin": null,
+      "dbpMax": 90,
+      "source": { "reference": "Bảng 1", "page": 7 }
+    },
+    {
+      "name": "hypertensive_crisis",
+      "sbpMin": 180,
+      "sbpMax": null,
+      "dbpMin": 120,
+      "dbpMax": null,
+      "source": { "reference": "Bảng 14", "page": 28 }
+    }
+  ],
+  "riskMatrix": [
+    { "tier": "tier0",    "bpCategory": "high_normal", "riskLevel": "low" },
+    { "tier": "tier0",    "bpCategory": "grade_1",     "riskLevel": "low" },
+    { "tier": "tier0",    "bpCategory": "grade_2",     "riskLevel": "intermediate" },
+    { "tier": "tier1_2",  "bpCategory": "high_normal", "riskLevel": "low" },
+    { "tier": "tier1_2",  "bpCategory": "grade_1",     "riskLevel": "intermediate" },
+    { "tier": "tier1_2",  "bpCategory": "grade_2",     "riskLevel": "high" },
+    { "tier": "tier3plus","bpCategory": "high_normal", "riskLevel": "high" },
+    { "tier": "tier3plus","bpCategory": "grade_1",     "riskLevel": "high" },
+    { "tier": "tier3plus","bpCategory": "grade_2",     "riskLevel": "high" }
+  ],
+  "thresholds": [
+    {
+      "ageGroup": "18-69",
+      "sbpThresholdNoComorbidity": 140,
+      "sbpThresholdWithComorbidity": 130,
+      "dbpThreshold": 90,
+      "dbpThresholdHighRisk": 85,
+      "source": { "reference": "Bảng 6", "page": 15 }
+    },
+    {
+      "ageGroup": "70-79",
+      "sbpThresholdNoComorbidity": 140,
+      "sbpThresholdWithComorbidity": 140,
+      "dbpThreshold": 90,
+      "source": { "reference": "Bảng 6", "page": 15 }
+    },
+    {
+      "ageGroup": ">=80",
+      "sbpThresholdNoComorbidity": 160,
+      "sbpThresholdWithComorbidity": 160,
+      "dbpThreshold": 90,
+      "source": { "reference": "Bảng 6", "page": 15 }
+    }
+  ],
+  "targets": [
+    {
+      "ageGroup": "18-69",
+      "sbpMinNoComorbidity": 120,
+      "sbpMaxNoComorbidity": 130,
+      "sbpMinWithComorbidity": 120,
+      "sbpMaxWithComorbidity": 130,
+      "dbpMax": 80,
+      "source": { "reference": "Bảng 7", "page": 16 }
+    },
+    {
+      "ageGroup": ">=70",
+      "sbpMinNoComorbidity": 130,
+      "sbpMaxNoComorbidity": 140,
+      "sbpMinWithComorbidity": 130,
+      "sbpMaxWithComorbidity": 140,
+      "dbpMax": 80,
+      "source": { "reference": "Bảng 7", "page": 16 }
+    }
+  ],
+  "contraindications": [
+    {
+      "drugClass": "D",
+      "absolute": ["gout"],
+      "relative": ["metabolic_syndrome", "glucose_intolerance", "pregnancy", "hypercalcemia", "hypokalemia"],
+      "source": { "reference": "Bảng 11", "page": 23 }
+    },
+    {
+      "drugClass": "B",
+      "absolute": ["asthma", "av_block_high_grade", "bradycardia_hr_under_60"],
+      "relative": ["metabolic_syndrome", "glucose_intolerance", "athlete"],
+      "source": { "reference": "Bảng 11", "page": 23 }
+    },
+    {
+      "drugClass": "C_DHP",
+      "absolute": [],
+      "relative": ["tachycardia", "hf_reduced_ef_nyha_3_4", "severe_leg_edema"],
+      "source": { "reference": "Bảng 11", "page": 23 }
+    },
+    {
+      "drugClass": "C_nonDHP",
+      "absolute": ["av_block_high_grade", "lvef_under_40", "bradycardia_hr_under_60"],
+      "relative": ["constipation"],
+      "source": { "reference": "Bảng 11", "page": 23 }
+    },
+    {
+      "drugClass": "A_ACEi",
+      "absolute": ["pregnancy", "angioedema_history", "hyperkalemia_over_5_5", "bilateral_renal_artery_stenosis"],
+      "relative": ["childbearing_age_no_contraception"],
+      "source": { "reference": "Bảng 11", "page": 23 }
+    },
+    {
+      "drugClass": "A_ARB",
+      "absolute": ["pregnancy", "hyperkalemia_over_5_5", "bilateral_renal_artery_stenosis"],
+      "relative": ["childbearing_age_no_contraception"],
+      "source": { "reference": "Bảng 11", "page": 23 }
+    },
+    {
+      "drugClass": "MRA",
+      "absolute": ["acute_renal_failure_egfr_under_30", "hyperkalemia"],
+      "relative": [],
+      "source": { "reference": "Bảng 11", "page": 23 }
+    }
+  ],
+  "essentialPathwayRules": [
+    {
+      "ruleId": "h3_r1_assess",
+      "description": "Entry: office BP ≥130/85 AND age >18",
+      "source": { "reference": "Hình 3", "page": 17 }
+    },
+    {
+      "ruleId": "h3_r2_branch",
+      "description": "Branch: HABTC+low/intermediate risk vs HABTC+high risk OR overt HTN OR comorbidity",
+      "source": { "reference": "Hình 3", "page": 17 }
+    },
+    {
+      "ruleId": "h3_r3_monotherapy",
+      "description": "Monotherapy: HABTC+low/intermediate after 3-6 months lifestyle; OR age ≥80; OR frail. Class A/B/C/D low dose",
+      "source": { "reference": "Hình 3", "page": 17 }
+    },
+    {
+      "ruleId": "h3_r4_dual_combination",
+      "description": "Dual combination: preferred A+C or A+D; alternatives A+B, B+C, B+D, C+D. Low → usual dose",
+      "source": { "reference": "Hình 3", "page": 17 }
+    },
+    {
+      "ruleId": "h3_r5_triple_combination",
+      "description": "Triple combination: preferred A+C+D, usual dose",
+      "source": { "reference": "Hình 3", "page": 17 }
+    },
+    {
+      "ruleId": "h3_r6_resistant",
+      "description": "Resistant (khó kiểm soát): on A+C+D at usual dose ≥1 month and not at target → REFER_SPECIALIST",
+      "source": { "reference": "Hình 3", "page": 17 }
+    }
+  ],
+  "optimalPathwayRules": [
+    {
+      "ruleId": "h4_r1_assess",
+      "description": "Entry: office BP ≥130/85 AND age >18",
+      "source": { "reference": "Hình 4", "page": 18 }
+    },
+    {
+      "ruleId": "h4_r2_branch",
+      "description": "Branch: low/intermediate HABTC; high-risk/HTN; compelling indication",
+      "source": { "reference": "Hình 4", "page": 18 }
+    },
+    {
+      "ruleId": "h4_r3_monotherapy",
+      "description": "Single-pill monotherapy: A/B/C/D low dose",
+      "source": { "reference": "Hình 4", "page": 18 }
+    },
+    {
+      "ruleId": "h4_r4_spc_dual",
+      "description": "Single-pill combination dual: preferred A+C or A+D, low → usual dose",
+      "source": { "reference": "Hình 4", "page": 18 }
+    },
+    {
+      "ruleId": "h4_r5_spc_triple",
+      "description": "Single-pill combination triple: A+C+D, usual dose",
+      "source": { "reference": "Hình 4", "page": 18 }
+    },
+    {
+      "ruleId": "h4_r6_resistant",
+      "description": "Resistant: add MRA (eGFR <45 or K >4.5 → caution/alternative). If still uncontrolled → REFER_SPECIALIST",
+      "source": { "reference": "Hình 4", "page": 18 }
+    },
+    {
+      "ruleId": "h4_r7_compelling",
+      "description": "Compelling indication overrides default pathway per Section 3.7",
+      "source": { "reference": "Hình 4, Section 3.7", "page": 18 }
+    }
+  ],
+  "compellingIndications": [
+    {
+      "indication": "coronary_artery_disease",
+      "thresholdSBP": 130,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 79,
+      "preferredClasses": [["A","B"], ["A","C"]],
+      "notes": ["DBP target 70-79 for CAD without revascularization, age >65", "Avoid DBP <70"],
+      "source": { "reference": "Bảng 19", "page": 33 }
+    },
+    {
+      "indication": "post_myocardial_infarction",
+      "thresholdSBP": 130,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 80,
+      "preferredClasses": [["A","B"]],
+      "notes": ["Beta-blocker mandatory post-MI", "ACEi/ARB mandatory post-MI with reduced EF"],
+      "source": { "reference": "Bảng 19", "page": 33 }
+    },
+    {
+      "indication": "heart_failure_reduced_ef",
+      "thresholdSBP": 130,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 80,
+      "preferredClasses": [["A","B","SGLT2i","MRA"], ["ARNI","B","SGLT2i","MRA"]],
+      "notes": ["Add loop diuretic if congestion present", "ARNI preferred over ACEi/ARB in HFrEF if tolerated", "Titrate to maximally tolerated doses"],
+      "source": { "reference": "Bảng 20", "page": 34 }
+    },
+    {
+      "indication": "heart_failure_preserved_ef",
+      "thresholdSBP": 130,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 80,
+      "preferredClasses": [["A","C"], ["A","D"]],
+      "notes": ["SGLT2i has emerging evidence in HFpEF", "Diuretics for symptom relief if congested"],
+      "source": { "reference": "Bảng 20", "page": 34 }
+    },
+    {
+      "indication": "left_ventricular_hypertrophy",
+      "thresholdSBP": 140,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 80,
+      "preferredClasses": [["A","C"], ["A","D"]],
+      "notes": ["Avoid direct vasodilators as monotherapy"],
+      "source": { "reference": "Section 3.7", "page": 30 }
+    },
+    {
+      "indication": "post_stroke",
+      "thresholdSBP": 140,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 80,
+      "preferredClasses": [["A","D"]],
+      "notes": ["Initiate/continue antihypertensive therapy in chronic phase", "Acute stroke management is out of scope"],
+      "source": { "reference": "Bảng 23-24", "page": 36 }
+    },
+    {
+      "indication": "chronic_kidney_disease",
+      "thresholdSBP": 130,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 80,
+      "preferredClasses": [["A","C"]],
+      "notes": ["ACEi/ARB mandatory for CKD with proteinuria", "Monitor eGFR and K+ after RAS blocker initiation", "Thiazide less effective if eGFR <30"],
+      "source": { "reference": "Bảng 21-22", "page": 35 }
+    },
+    {
+      "indication": "type2_diabetes_high_risk",
+      "thresholdSBP": 130,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 80,
+      "preferredClasses": [["A","C"], ["A","D"]],
+      "notes": ["Consider SGLT2i or GLP1RA for glycemic control with CV benefit [Bảng 18, p.32]"],
+      "source": { "reference": "Bảng 18", "page": 32 }
+    },
+    {
+      "indication": "atrial_fibrillation",
+      "thresholdSBP": 140,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 80,
+      "preferredClasses": [["A","B"], ["A","C"]],
+      "notes": ["Beta-blocker or non-DHP CCB for rate control", "Consider stroke risk and anticoagulation"],
+      "source": { "reference": "Section 3.7", "page": 30 }
+    },
+    {
+      "indication": "angina",
+      "thresholdSBP": 140,
+      "targetSBPMax": 130,
+      "targetSBPMin": 120,
+      "targetDBPMax": 80,
+      "preferredClasses": [["A","B"], ["B","C"]],
+      "notes": ["Beta-blocker first-line for angina symptoms", "Long-acting CCB if beta-blocker not tolerated"],
+      "source": { "reference": "Section 3.7", "page": 30 }
+    }
+  ]
+}

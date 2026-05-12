@@ -1,0 +1,18 @@
+{
+  "patientId": "P032",
+  "ageYears": 50,
+  "sex": "male",
+  "officeSBP": 175,
+  "officeDBP": 110,
+  "siteConfig": { "pathwayMode": "optimal" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "grade_2",
+    "cvRiskLevel": "high",
+    "currentStep": "h4_r4_spc_dual",
+    "doseLevel": "usual",
+    "safetyAlertCount": 0,
+    "pathwayUsed": "optimal",
+    "note": "Grade 2 → usual dose dual SPC immediately"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "patientId": "P027",
+  "ageYears": 45,
+  "sex": "male",
+  "officeSBP": 142,
+  "officeDBP": 88,
+  "siteConfig": { "pathwayMode": "essential" },
+  "_expected": {
+    "status": "PRESCRIBE",
+    "bpCategory": "isolated_systolic",
+    "cvRiskLevel": "intermediate",
+    "currentStep": "h3_r4_dual_combination",
+    "safetyAlertCount": 0,
+    "pathwayUsed": "essential",
+    "note": "SBP 142 ≥140 AND DBP 88 <90 → isolated systolic HTN"
+  }
+}
